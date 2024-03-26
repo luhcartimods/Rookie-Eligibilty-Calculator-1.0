@@ -1,6 +1,8 @@
 import pandas as pd
-
+#make sure to run (pip install pandas) in the terminal
 #data from bbref (idk how to source)
+#this data is from 2023 season
+
 data = {
     'Jake Alu': 175,
     'Francisco Alvarez': 437,
@@ -98,7 +100,7 @@ def check_rookie_eligibility(player_name):
     else:
         rookie_status = is_rookie(pa)
         if rookie_status:
-            print(f"{player_name} is eligible as a rookie, {player_name} has {pa} plate apperances! The cuttoff is 130 PA!")
+            print(f"{player_name} is eligible as a rookie, {player_name} has {pa} plate apperances! The cuttoff is 130 Plate Apperances!")
         else:
             print(f"{player_name} is not eligible as a rookie. {player_name} has {pa} plate apperances!")
 
