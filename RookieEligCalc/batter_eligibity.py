@@ -1,7 +1,8 @@
 import pandas as pd
-#make sure to run (pip install pandas) in the terminal
+
 #data from bbref (idk how to source)
-#this data is from 2023 season
+#make sure to run pip install pandas in the terminal
+#data from 2023 season 
 
 data = {
     'Jake Alu': 175,
@@ -96,13 +97,16 @@ def get_pa(player_name):
 def check_rookie_eligibility(player_name):
     pa = get_pa(player_name)
     if pa == "Player not found":
-        print("Player not found in the data.")
+        print("Player not found, check here for all 2023 rookies: https://www.baseball-reference.com/leagues/majors/2023-rookies.shtml")
     else:
         rookie_status = is_rookie(pa)
         if rookie_status:
-            print(f"{player_name} is eligible as a rookie, {player_name} has {pa} plate apperances! The cuttoff is 130 Plate Apperances!")
+            print(f"{player_name} is eligible as a rookie, {player_name} has {pa}/150 plate apperances!")
         else:
-            print(f"{player_name} is not eligible as a rookie. {player_name} has {pa} plate apperances!")
+            print(f"{player_name} is not eligible as a rookie. {player_name} has {pa}/150 plate apperances!")
 
-player_name = input("Enter the player's name: ")
-check_rookie_eligibility(player_name)
+while True:
+    player_name = input("Enter the player's name (type 'exit' to quit): ")
+    if player_name.lower() == 'exit':
+        break
+    check_rookie_eligibility(player_name)
