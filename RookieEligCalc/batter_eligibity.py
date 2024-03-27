@@ -1,6 +1,6 @@
 import pandas as pd
 
-#data from bbref (idk how to source)
+#data from bbref 
 #make sure to run pip install pandas in the terminal
 #data from 2023 season 
 
